@@ -3,5 +3,5 @@
 {% block title %}Home | {% endblock %}
 
 {% block content %}
-    <h1>Front Page</h1>
+    <h1 class="">Front Page</h1>
 {% endblock %}
