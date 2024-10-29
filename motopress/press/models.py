@@ -7,3 +7,8 @@ class Article(models.Model):
     body = models.TextField()
     upload = models.ImageField(upload_to='uploads/')
     created_at = models.DateTimeField(auto_now=True)
+    
+class Image(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    image = models.ImageField()
+        
