@@ -3,5 +3,11 @@
 {% block title %}Home | {% endblock %}
 
 {% block content %}
-    <h1 class="">Front Page</h1>
+    <section>
+        <div>
+            {% for article in articles %}
+                <h1>{{ article.title }}</h1>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}
