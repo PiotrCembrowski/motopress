@@ -8,3 +8,6 @@ def frontpage(request):
 
 def contact(request):
     return render(request, 'core/contact.html')
+
+def post(request):
+    return render(request, 'core/Post.html')
