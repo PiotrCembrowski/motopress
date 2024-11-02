@@ -9,6 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('contact/', contact, name='contact'),
     path('post/', post, name='post'),
+    path('<slug:slug>', views.article, name="artciles")
     path('', frontpage, name='frontpage'),
     path("__reload__/", include("django_browser_reload.urls"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
