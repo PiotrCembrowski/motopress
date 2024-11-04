@@ -8,8 +8,7 @@
   <section>
     <div>
       {% for article in articles %}
-        <h1>{{ article.title }}</h1>
-        <h2><a href="{% url 'moto_arts' slug=article.slug %}">{{ article.title }}</a></h2>
+        <h2><a href="{% url 'article' slug=article.slug %}">{{ article.title }}</a></h2>
       {% endfor %}
     </div>
   </section>
