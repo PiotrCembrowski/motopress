@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from press.models import Article
-from django.http import HttpResponse
 
 def frontpage(request):
     articles = Article.objects.all()
@@ -13,4 +12,5 @@ def post(request):
     return render(request, 'core/post.html')
 
 def article(request, slug):
-    return HttpResponse(slug)
+    article = Article.objects.get(slug=slug)
+    return render(request, 'core/article.html', {'article': article})

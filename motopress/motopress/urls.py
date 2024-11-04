@@ -5,7 +5,7 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
-app_motopress = 'article'
+app_motopress = 'articles'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
