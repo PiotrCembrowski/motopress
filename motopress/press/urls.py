@@ -1,7 +1,8 @@
 from django.urls import path
-from django.urls import include, path
-from core.views import login
+from press.views import login
+
+app_name = 'press'
 
 urlpatterns = [
-    path('login/', login, name='login')
+    path('press/login/', login, name='login')
 ]
