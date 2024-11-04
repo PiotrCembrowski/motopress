@@ -4,5 +4,5 @@ from press.views import login
 app_name = 'press'
 
 urlpatterns = [
-    path('press/login/', login, name='login')
+    path('login/', login, name='login')
 ]
