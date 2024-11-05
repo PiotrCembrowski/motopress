@@ -6,7 +6,7 @@ def login(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
-            return redirect("")
+            return redirect("press:login")
     else:
         form = AuthenticationForm()
     return render(request, 'press/login.html', { "form": form})
