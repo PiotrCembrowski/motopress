@@ -12,3 +12,6 @@ def login_view(request):
     else:
         form = AuthenticationForm()
     return render(request, 'press/login.html', { "form": form})
+
+def post(request):
+    return
