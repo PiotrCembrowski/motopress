@@ -9,7 +9,10 @@ def login_view(request):
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             login(request, form.get_user())
-            return redirect("press:login")
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect("press:login")
     else:
         form = AuthenticationForm()
     return render(request, 'press/login.html', { "form": form})
