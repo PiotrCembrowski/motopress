@@ -14,4 +14,4 @@ def login_view(request):
     return render(request, 'press/login.html', { "form": form})
 
 def post(request):
-    return
+    return render(request, 'press/post.html')
