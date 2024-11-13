@@ -6,7 +6,7 @@ class Article(models.Model):
     intro = models.TextField()
     body = models.TextField()
     upload = models.ImageField(upload_to='uploads/')
-    created_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     banner = models.ImageField(default='image.png', blank=True)
     
     def __str__(self):
