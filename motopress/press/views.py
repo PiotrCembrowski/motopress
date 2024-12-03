@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
+from . import forms
 
 # Create your views here.
 def login_view(request):
@@ -19,4 +20,5 @@ def login_view(request):
 
 @login_required(login_url="/press/login/")
 def post(request):
-    return render(request, 'press/post.html')
+    form = forms.CreateArticle()
+    return render(request, 'press/post.html', { 'form': form })
